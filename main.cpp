@@ -12,12 +12,12 @@ void skaitomPusinam(vector<int> &A);
 void spausdink(vector<int> A, string text);
 void rikiavimas(vector<int> &A);
 void mazejimo(vector<int> &A);
-
+void trinam(vector<int> A, vector<int> &B);
 
 int main()
 {
 
-    vector<int> M;
+    vector<int> M, Ap;
 
     skaitomPusinam(M);
     spausdink(M, "Nuskaite");
@@ -25,6 +25,9 @@ int main()
     spausdink(M, "surikiuotas didejimo");
     mazejimo(M);
     spausdink(M, "mazejimo tvarka");
+    trinam(M, Ap);
+    spausdink(Ap, "aptrintas");
+
 
 
 
@@ -56,4 +59,7 @@ void rikiavimas(vector<int> &A){
 }
 void mazejimo(vector<int> &A){
     sort(A.begin(),A.end(), greater<int>());
+}
+void trinam(vector<int> A, vector<int> &B){
+    A.erase(unique(A.begin(), A.end()), A.end());
 }
