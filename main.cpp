@@ -24,6 +24,8 @@ int main()
          cout <<V[i]<<"  ";
     }
 
-
+    if(V.empty()){
+        cout<<"Tuscias masyvas \n";
+    } else {cout<<"Pilnas  \n";}
     return 0;
 }
