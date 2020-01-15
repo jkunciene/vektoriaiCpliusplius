@@ -11,6 +11,7 @@ ofstream out("res.txt");
 void skaitomPusinam(vector<int> &A);
 void spausdink(vector<int> A, string text);
 void rikiavimas(vector<int> &A);
+void mazejimo(vector<int> &A);
 
 
 int main()
@@ -21,7 +22,9 @@ int main()
     skaitomPusinam(M);
     spausdink(M, "Nuskaite");
     rikiavimas(M);
-    spausdink(M, "surikiuotas");
+    spausdink(M, "surikiuotas didejimo");
+    mazejimo(M);
+    spausdink(M, "mazejimo tvarka");
 
 
 
@@ -50,4 +53,7 @@ void rikiavimas(vector<int> &A){
     cout<<did<<endl;
     cout<<maz;
     sort(A.begin(),A.end());
+}
+void mazejimo(vector<int> &A){
+    sort(A.begin(),A.end(), greater<int>());
 }
